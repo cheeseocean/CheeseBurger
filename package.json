@@ -11,7 +11,7 @@
     "amfe-flexible": "^2.2.1",
     "core-js": "^3.6.5",
     "js-http-fetch": "^1.0.1",
-    "postcss-px2rem": "^0.3.0",
+    "postcss-plugin-px2rem": "^0.8.1",
     "ts-import-plugin": "^2.0.0",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "vant": "^3.4.5",

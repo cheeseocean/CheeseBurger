@@ -1,5 +1,8 @@
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const tsImportPluginFactory = require('ts-import-plugin')
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const merge = require('webpack-merge')
 
 const isProduction = process.env.NODE_ENV === 'production',
@@ -55,13 +58,4 @@ module.exports = {
         return options
       })
   },
-  css: {
-    loaderOptions: {
-      postcss: {
-        plugins: [
-          require('postcss-px2rem')({remUnit: 75})
-        ]
-      }
-    }
-  }
 };

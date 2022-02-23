@@ -1,6 +1,6 @@
 <template>
   <h3>Login</h3>
-  <Button type="primary">主要按钮</Button>
+  <Button type="primary" block>登录</Button>
 </template>
 
 <script lang="ts" setup>
