@@ -1,0 +1,133 @@
+@for $i from 1 through 10 {
+  $size: $i * 5;
+  .mt-#{$size} {
+    margin-top: unquote($size + 'px');
+  }
+  .mr-#{$size} {
+    margin-right: unquote($size + 'px');
+  }
+  .mb-#{$size} {
+    margin-bottom: unquote($size + 'px');
+  }
+  .ml-#{$size} {
+    margin-left: unquote($size + 'px');
+  }
+
+  .pt-#{$size} {
+    padding-top: unquote($size + 'px');
+  }
+  .pr-#{$size} {
+    padding-right: unquote($size + 'px');
+  }
+  .pb-#{$size} {
+    padding-bottom: unquote($size + 'px');
+  }
+  .pl-#{$size} {
+    padding-left: unquote($size + 'px');
+  }
+}
+
+@for $i from 1 through 20 {
+  $size: $i * 10;
+  .w-#{$size} {
+    width: unquote($size + 'px');
+  }
+  .h-#{$size} {
+    height: unquote($size + 'px');
+  }
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.clearfix:after {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+.fs-12 {
+  font-size: 12px;
+}
+
+.fs-13 {
+  font-size: 13px;
+}
+
+.color-grey {
+  color: grey;
+}
+
+.color-white {
+  color: #fff;
+}
+
+.color-black {
+  color: #000;
+}
+
+.tx-al-l {
+  text-align: left;
+}
+
+.tx-al-c {
+  text-align: center;
+}
+
+.tx-al-r {
+  text-align: right;
+}
+
+.bd-bm-da-d {
+  border-bottom: 1px dashed #ddd;
+}
+
+.bd-bm-da-c {
+  border-bottom: 1px dashed #ccc;
+}
+
+.bd-bm-so-d {
+  border-bottom: 1px solid #ddd;
+}
+
+.bd-bm-so-c {
+  border-bottom: 1px solid #ccc;
+}
+
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.jst-tent-center {
+  justify-content: center;
+}
+
+.jst-tent-around {
+  justify-content: space-around;
+}
+
+.jst-tent-between {
+  justify-content: space-between;
+}
+
+.jst-tent-evenly {
+  justify-content: space-evenly;
+}
+
+// el开头表示针对element-plus（ui）的元素
+.el-btn-ft-12 {
+  span {
+    font-size: 12px;
+  }
+}
+
+.el-btn-ft-13 {
+  span {
+    font-size: 13px;
+  }
+}
