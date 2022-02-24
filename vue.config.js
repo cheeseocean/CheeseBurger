@@ -17,7 +17,7 @@ const isProduction = process.env.NODE_ENV === 'production',
   })
 
 module.exports = {
-  publicPath: '/',
+  publicPath: '/web',
   assetsDir: 'static',
   filenameHashing: true,
   devServer: {
@@ -35,6 +35,7 @@ module.exports = {
       [uglifyJsPlugin] :
       []
   },
+  parallel: false, // 处理生产时vant自动引入样式失败
   chainWebpack(config) {
     config.module
       .rule('ts')

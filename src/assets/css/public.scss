@@ -1,44 +1,15 @@
-@for $i from 1 through 10 {
-  $size: $i * 5;
-  .mt-#{$size} {
-    margin-top: unquote($size + 'px');
-  }
-  .mr-#{$size} {
-    margin-right: unquote($size + 'px');
-  }
-  .mb-#{$size} {
-    margin-bottom: unquote($size + 'px');
-  }
-  .ml-#{$size} {
-    margin-left: unquote($size + 'px');
-  }
+@import "./var";
 
-  .pt-#{$size} {
-    padding-top: unquote($size + 'px');
-  }
-  .pr-#{$size} {
-    padding-right: unquote($size + 'px');
-  }
-  .pb-#{$size} {
-    padding-bottom: unquote($size + 'px');
-  }
-  .pl-#{$size} {
-    padding-left: unquote($size + 'px');
-  }
-}
-
-@for $i from 1 through 20 {
-  $size: $i * 10;
-  .w-#{$size} {
-    width: unquote($size + 'px');
-  }
-  .h-#{$size} {
-    height: unquote($size + 'px');
-  }
-}
-
-.inline-block {
+.il-block {
   display: inline-block;
+}
+
+.fleft {
+  float: left;
+}
+
+.fright {
+  float: right;
 }
 
 .clearfix:after {
@@ -55,15 +26,23 @@
   font-size: 13px;
 }
 
-.color-grey {
+.fs-14 {
+  font-size: 14px;
+}
+
+.co-blue {
+  color: #409eff;
+}
+
+.co-grey {
   color: grey;
 }
 
-.color-white {
+.co-white {
   color: #fff;
 }
 
-.color-black {
+.co-black {
   color: #000;
 }
 
@@ -103,31 +82,18 @@
   align-items: center;
 }
 
-.jst-tent-center {
+.jst-cnt-center {
   justify-content: center;
 }
 
-.jst-tent-around {
+.jst-cnt-around {
   justify-content: space-around;
 }
 
-.jst-tent-between {
+.jst-cnt-between {
   justify-content: space-between;
 }
 
-.jst-tent-evenly {
+.jst-cnt-evenly {
   justify-content: space-evenly;
-}
-
-// el开头表示针对element-plus（ui）的元素
-.el-btn-ft-12 {
-  span {
-    font-size: 12px;
-  }
-}
-
-.el-btn-ft-13 {
-  span {
-    font-size: 13px;
-  }
 }
