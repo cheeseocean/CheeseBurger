@@ -21,7 +21,7 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('@/views/user/Register.vue')
   },
 ]
-console.log(process.env)
+
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes
