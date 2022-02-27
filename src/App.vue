@@ -7,6 +7,8 @@
 <style lang="scss" scoped>
 .main {
   padding: 0 15px;
-  position: absolute;
+  //position: absolute;
+  max-width: 750PX;
+  max-height: 600PX;
 }
 </style>

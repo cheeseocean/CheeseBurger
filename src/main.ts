@@ -1,5 +1,5 @@
 import {createApp} from 'vue'
-import 'amfe-flexible'
+import '@/assets/js/amfe-flexible-2.2.1'
 import {Form, CellGroup, Field, Button} from "vant"
 import '@/assets/css/base.scss'
 import App from './App.vue'
