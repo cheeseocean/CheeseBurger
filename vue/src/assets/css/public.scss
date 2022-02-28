@@ -1,0 +1,99 @@
+@import "./var";
+
+.il-block {
+  display: inline-block;
+}
+
+.fleft {
+  float: left;
+}
+
+.fright {
+  float: right;
+}
+
+.clearfix:after {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+.fs-12 {
+  font-size: 12px;
+}
+
+.fs-13 {
+  font-size: 13px;
+}
+
+.fs-14 {
+  font-size: 14px;
+}
+
+.co-blue {
+  color: #409eff;
+}
+
+.co-grey {
+  color: grey;
+}
+
+.co-white {
+  color: #fff;
+}
+
+.co-black {
+  color: #000;
+}
+
+.tx-al-l {
+  text-align: left;
+}
+
+.tx-al-c {
+  text-align: center;
+}
+
+.tx-al-r {
+  text-align: right;
+}
+
+.bd-bm-da-d {
+  border-bottom: 1px dashed #ddd;
+}
+
+.bd-bm-da-c {
+  border-bottom: 1px dashed #ccc;
+}
+
+.bd-bm-so-d {
+  border-bottom: 1px solid #ddd;
+}
+
+.bd-bm-so-c {
+  border-bottom: 1px solid #ccc;
+}
+
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.jst-cnt-center {
+  justify-content: center;
+}
+
+.jst-cnt-around {
+  justify-content: space-around;
+}
+
+.jst-cnt-between {
+  justify-content: space-between;
+}
+
+.jst-cnt-evenly {
+  justify-content: space-evenly;
+}

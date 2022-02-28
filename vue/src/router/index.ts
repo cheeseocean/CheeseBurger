@@ -2,11 +2,13 @@ import {createRouter, createWebHistory, RouteRecordRaw} from 'vue-router'
 
 export const LOGIN_PATH = '/login'
 export const FIND_PASSWORD_PATH = '/find-password'
-export const REGISTRE_PATH = '/register'
+export const REGISTER_PATH = '/register'
 export const INDEX_PATH = '/index'
 export const COMMUNITY_PATH = '/community'
+export const VIDEOS_PATH = '/videos'
 export const CREATION_PATH = '/creation'
-export const HIDE_MENU_PATH_SET = new Set([LOGIN_PATH, FIND_PASSWORD_PATH, REGISTRE_PATH]) // 需隐藏菜单的路由列表
+export const PERSONAL_PATH = '/personal'
+export const HIDE_MENU_PATH_SET = new Set([LOGIN_PATH, FIND_PASSWORD_PATH, REGISTER_PATH]) // 需隐藏菜单的路由列表
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
@@ -23,7 +25,7 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('@/views/user/find-password/find-password.vue')
   },
   {
-    path: REGISTRE_PATH, // 注册
+    path: REGISTER_PATH, // 注册
     name: 'Register',
     component: () => import('@/views/user/register/register.vue')
   },
@@ -40,6 +42,14 @@ const routes: Array<RouteRecordRaw> = [
     path: CREATION_PATH, // 创作中心
     name: 'Creation',
     component: () => import('@/views/creation/creation.vue')
+  },{
+    path: VIDEOS_PATH, // 云视频
+    name: 'Videos',
+    component: () => import('@/views/videos/videos.vue')
+  },{
+    path: PERSONAL_PATH, // 个人中心
+    name: 'Personal',
+    component: () => import('@/views/personal/personal.vue')
   },
 ]
 

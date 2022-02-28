@@ -17,7 +17,7 @@ const isProduction = process.env.NODE_ENV === 'production',
   })
 
 module.exports = {
-  publicPath: '/web',
+  publicPath: '/vue',
   assetsDir: 'static',
   filenameHashing: true,
   devServer: {
