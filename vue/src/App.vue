@@ -18,6 +18,5 @@ import {HIDE_MENU_PATH_SET, INDEX_PATH, COMMUNITY_PATH, CREATION_PATH, VIDEOS_PA
 .main {
   max-width: 540PX;
   width: 100%;
-  padding: 0 15px;
 }
 </style>
