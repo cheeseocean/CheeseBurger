@@ -2,6 +2,28 @@
 
 :root:root {
   --adm-color-primary: #{$primary-color};
+  --adm-font-size-main: 14px;
+
+  .adm-input {
+    --font-size: 14px;
+  }
+
+  .adm-button {
+    font-size: 14px;
+  }
+
+  .adm-list {
+    font-size: 14px;
+    --font-size: 14px;
+  }
+
+  .adm-radio-content {
+    font-size: 14px;
+  }
+
+  .adm-checkbox-content {
+    font-size: 14px;
+  }
 }
 
 .extraPart {

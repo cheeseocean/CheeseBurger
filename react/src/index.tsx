@@ -6,7 +6,7 @@ import '@/assets/css/base.scss'
 import '@/assets/css/public.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-console.log(process.env)
+
 ReactDOM.render(
   <BrowserRouter basename={process.env.PUBLIC_URL}>
     <App/>

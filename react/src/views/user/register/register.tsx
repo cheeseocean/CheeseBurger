@@ -21,25 +21,25 @@ export default function Register() {
           </div>
         </div>
       }>
-        <Form.Item name='username' label='用户名' rules={[{required: true, message: '用户名不能为空'}]}>
+        <Form.Item name='username' label='用户名' rules={[{required: true, message: '请填写用户名'}]}>
           <Input placeholder='请输入用户名'/>
         </Form.Item>
-        <Form.Item name='email' label='邮箱' rules={[{required: true, message: '邮箱不能为空'}]}>
+        <Form.Item name='email' label='邮箱' rules={[{required: true, message: '请填写邮箱'}]}>
           <Input placeholder='请输入邮箱' clearable type='password'/>
         </Form.Item>
-        <Form.Item name='password' label='密码' rules={[{required: true, message: '密码不能为空'}]}>
+        <Form.Item name='password' label='密码' rules={[{required: true, message: '请填写密码'}]}>
           <Input placeholder='请输入密码' clearable type='password'/>
         </Form.Item>
-        <Form.Item name='password2' label='确认密码' rules={[{required: true, message: '确认密码不能为空'}]}>
+        <Form.Item name='password2' label='确认密码' rules={[{required: true, message: '请再次填写密码'}]}>
           <Input placeholder='请再次输入密码' clearable type='password'/>
         </Form.Item>
         <Form.Item
           name='code'
           label='邮箱验证码'
-          rules={[{required: true, message: '验证码不能为空'}]}
+          rules={[{required: true, message: '请填写验证码'}]}
           extra={
             <div className='extraPart'>
-              <Button>发送验证码</Button>
+              <Button color='primary' size='small'>发送验证码</Button>
             </div>
           }
         >

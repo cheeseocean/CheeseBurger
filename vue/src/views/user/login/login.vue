@@ -2,8 +2,8 @@
   <h3 class="title">登录</h3>
   <van-form @submit="login">
     <van-cell-group inset>
-      <van-field v-model="username" name="用户名" clearable label="用户名" placeholder="用户名" :rules="[{ required: true, message: '请填写用户名' }]"/>
-      <van-field v-model="password" type="password" name="密码" clearable label="密码" placeholder="密码" :rules="[{ required: true, message: '请填写密码' }]"/>
+      <van-field v-model="username" name="用户名" clearable label="用户名" placeholder="请输入用户名" :rules="[{ required: true, message: '请填写用户名' }]"/>
+      <van-field v-model="password" type="password" name="密码" clearable label="密码" placeholder="请输入密码" :rules="[{ required: true, message: '请填写密码' }]"/>
     </van-cell-group>
     <div style="margin: 16px;">
       <van-button type="primary" block round native-type="submit">登录</van-button>
@@ -39,9 +39,12 @@
 import {ref} from "vue";
 import http from "@/http/http";
 import base64 from 'base-64';
+import {useRouter} from "vue-router";
+import {INDEX_PATH} from "@/router";
 
 const username = ref('')
 const password = ref('')
+const router = useRouter()
 
 function login() {
   console.log('login')
@@ -50,6 +53,7 @@ function login() {
   formData.append('password', base64.encode(password.value))
   http.post('', formData,
       {headers: {"Content-Type": 'multipart/form-data'}}).then(r => console.log(r))
+  router.push(INDEX_PATH)
 }
 </script>
 

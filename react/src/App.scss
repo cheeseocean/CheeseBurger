@@ -1,7 +1,12 @@
 .main {
-  //width: 100%;
   max-width: 540PX;
+  width: 100%;
   padding: 0 15px;
-  max-height: 600PX;
-  //position: absolute;
+
+  .tab-bar {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
 }

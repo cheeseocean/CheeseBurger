@@ -3,13 +3,16 @@ import {Form, Input, Button} from "antd-mobile";
 import base64 from "base-64";
 import './login.scss'
 import http from "@/http/http";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import {LoginForm} from "@/views/user/login/login-types";
+import {index} from "@/router/router";
 
 export default function Login() {
+  const navigate = useNavigate()
 
   function onFinish(data: LoginForm) {
     http.post('', {username: data.username, password: base64.encode(data.username)}).then(r => console.log(r))
+    navigate(index.path)
   }
 
   return (
@@ -17,17 +20,17 @@ export default function Login() {
       <h3 className='title'>登录</h3>
       <Form onFinish={onFinish} layout='horizontal' footer={
         <div>
-          <Button shape='rounded' block type='submit' color='primary' size='middle'>提交</Button>
+          <Button shape='rounded' block type='submit' color='primary' size='middle'>登录</Button>
           <div className='flex jst-cnt-between fs-14 mt-10'>
             <Link to='/find-password' className='co-blue'>忘记密码?</Link>
             <Link to='/register' className='co-blue'>注册</Link>
           </div>
         </div>
       }>
-        <Form.Item name='username' label='用户名' rules={[{required: true, message: '用户名不能为空'}]}>
-          <Input placeholder='请输入用户名'/>
+        <Form.Item name='username' label='用户名' validateTrigger='onBlur' rules={[{required: true, message: '请填写用户名'}]}>
+          <Input placeholder='请输入用户名' clearable/>
         </Form.Item>
-        <Form.Item name='password' label='密码' rules={[{required: true, message: '密码不能为空'}]}>
+        <Form.Item name='password' label='密码' validateTrigger='onBlur' rules={[{required: true, message: '请填写密码'}]}>
           <Input placeholder='请输入密码' clearable type='password'/>
         </Form.Item>
       </Form>

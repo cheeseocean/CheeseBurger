@@ -11,14 +11,13 @@
   </div>
 </template>
 <script lang="ts" setup>
-import {ref} from "vue";
 import {HIDE_MENU_PATH_SET, INDEX_PATH, COMMUNITY_PATH, CREATION_PATH, VIDEOS_PATH, PERSONAL_PATH} from "@/router";
 
 </script>
 <style lang="scss" scoped>
 .main {
-  padding: 0 15px;
   max-width: 540PX;
-  max-height: 600PX;
+  width: 100%;
+  padding: 0 15px;
 }
 </style>

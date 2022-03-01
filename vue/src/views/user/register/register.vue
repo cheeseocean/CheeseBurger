@@ -2,11 +2,11 @@
   <h3 class="title">注册</h3>
   <van-form @submit="register">
     <van-cell-group inset>
-      <van-field v-model="username" name="用户名" clearable label="用户名" placeholder="用户名" :rules="[{ required: true, message: '请填写用户名' }]"/>
-      <van-field v-model="email" type="password" name="邮箱" clearable label="邮箱" placeholder="邮箱" :rules="[{ required: true, message: '请填写邮箱' }]"/>
-      <van-field v-model="password" type="password" name="密码" clearable label="密码" placeholder="密码" :rules="[{ required: true, message: '请填写密码' }]"/>
-      <van-field v-model="password2" type="password" name="确认密码" clearable label="确认密码" placeholder="确认密码" :rules="[{ required: true, message: '请再次填写密码' }]"/>
-      <van-field v-model="code" center clearable label="邮箱验证码" placeholder="邮箱验证码" :rules="[{ required: true, message: '请填写邮箱验证码' }]">
+      <van-field v-model="username" name="用户名" clearable label="用户名" placeholder="请输入用户名" :rules="[{ required: true, message: '请填写用户名' }]"/>
+      <van-field v-model="email" type="password" name="邮箱" clearable label="邮箱" placeholder="请输入邮箱" :rules="[{ required: true, message: '请填写邮箱' }]"/>
+      <van-field v-model="password" type="password" name="密码" clearable label="密码" placeholder="请输入密码" :rules="[{ required: true, message: '请填写密码' }]"/>
+      <van-field v-model="password2" type="password" name="确认密码" clearable label="确认密码" placeholder="请确认密码" :rules="[{ required: true, message: '请再次填写密码' }]"/>
+      <van-field v-model="code" center clearable label="邮箱验证码" placeholder="请输入验证码" :rules="[{ required: true, message: '请填写邮箱验证码' }]">
         <template #button>
           <van-button size="small" type="primary">发送验证码</van-button>
         </template>
