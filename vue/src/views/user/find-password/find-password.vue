@@ -6,7 +6,7 @@
       <van-field v-model="email" type="password" name="邮箱" clearable label="邮箱" placeholder="请输入邮箱" :rules="[{ required: true, message: '请填写邮箱' }]"/>
       <van-field v-model="code" center clearable label="邮箱验证码" placeholder="请输入验证码" :rules="[{ required: true, message: '请填写邮箱验证码' }]">
         <template #button>
-          <van-button size="small" type="primary">发送验证码</van-button>
+          <code-button :validator="() => !!email" :request-config="{url: ''}"/>
         </template>
       </van-field>
     </van-cell-group>
@@ -22,6 +22,7 @@
 
 <script lang="ts" setup>
 import {ref} from "vue";
+import CodeButton from "@/components/user/code-button.vue";
 
 const username = ref('')
 const email = ref('')

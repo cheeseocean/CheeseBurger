@@ -1,10 +1,13 @@
-import React from "react";
+import React, {useState} from "react";
 import {Button, Form, Input} from "antd-mobile";
 import {Link} from "react-router-dom";
 import './register.scss'
 import {RegisterForm} from "@/views/user/register/register-types";
+import CodeButton from "@/components/user/code-button";
 
 export default function Register() {
+  const [email, setEmail] = useState('')
+
   function onFinish(data: RegisterForm) {
     console.log(data)
   }
@@ -25,7 +28,7 @@ export default function Register() {
           <Input placeholder='请输入用户名'/>
         </Form.Item>
         <Form.Item name='email' label='邮箱' rules={[{required: true, message: '请填写邮箱'}]}>
-          <Input placeholder='请输入邮箱' clearable type='password'/>
+          <Input placeholder='请输入邮箱' onChange={setEmail} clearable type='password'/>
         </Form.Item>
         <Form.Item name='password' label='密码' rules={[{required: true, message: '请填写密码'}]}>
           <Input placeholder='请输入密码' clearable type='password'/>
@@ -39,7 +42,7 @@ export default function Register() {
           rules={[{required: true, message: '请填写验证码'}]}
           extra={
             <div className='extraPart'>
-              <Button color='primary' size='small'>发送验证码</Button>
+              <CodeButton validator={() => !!email} requestConfig={{url: ''}}/>
             </div>
           }
         >

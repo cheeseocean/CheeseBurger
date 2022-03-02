@@ -1,10 +1,12 @@
-import React from "react";
+import React, {useState} from "react";
 import {Button, Form, Input} from "antd-mobile";
 import {Link} from "react-router-dom";
 import './find-password.scss'
 import {FindPasswordFrom} from "./find-password-types";
+import CodeButton from "@/components/user/code-button";
 
 export default function FindPassword() {
+  const [email, setEmail] = useState('')
 
   function onFinish(data: FindPasswordFrom) {
     console.log(arguments)
@@ -26,7 +28,7 @@ export default function FindPassword() {
           <Input placeholder='请输入用户名'/>
         </Form.Item>
         <Form.Item name='email' label='邮箱' rules={[{required: true, message: '请填写邮箱'}]}>
-          <Input placeholder='请输入邮箱' clearable type='password'/>
+          <Input placeholder='请输入邮箱' onChange={setEmail} clearable type='password'/>
         </Form.Item>
         <Form.Item
           name='code'
@@ -34,7 +36,7 @@ export default function FindPassword() {
           rules={[{required: true, message: '请填写验证码'}]}
           extra={
             <div className='extraPart'>
-              <Button color='primary' size='small'>发送验证码</Button>
+              <CodeButton validator={() => !!email} requestConfig={{url: '/'}}/>
             </div>
           }
         >

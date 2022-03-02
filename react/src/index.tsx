@@ -4,6 +4,7 @@ import {BrowserRouter} from 'react-router-dom'
 import '@/assets/js/amfe-flexible-2.2.1'
 import '@/assets/css/base.scss'
 import '@/assets/css/public.scss';
+import '@/assets/css/antd-mobile.scss'
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 

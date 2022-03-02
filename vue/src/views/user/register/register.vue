@@ -8,7 +8,7 @@
       <van-field v-model="password2" type="password" name="确认密码" clearable label="确认密码" placeholder="请确认密码" :rules="[{ required: true, message: '请再次填写密码' }]"/>
       <van-field v-model="code" center clearable label="邮箱验证码" placeholder="请输入验证码" :rules="[{ required: true, message: '请填写邮箱验证码' }]">
         <template #button>
-          <van-button size="small" type="primary">发送验证码</van-button>
+          <code-button :validator="() => !!email" :request-config="{url: ''}"/>
         </template>
       </van-field>
     </van-cell-group>
@@ -24,6 +24,7 @@
 
 <script lang="ts" setup>
 import {ref} from "vue";
+import CodeButton from "@/components/user/code-button.vue";
 
 const username = ref('')
 const email = ref('')
