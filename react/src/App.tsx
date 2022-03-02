@@ -46,7 +46,7 @@ function App() {
   }
 
   return (
-    <div className="main">
+    <div className={'main' + (HIDE_MENU_PATH_SET.has(location.pathname) ? '' : ' pb-50')}>
       <Routes>
         <Route element={<Navigate to={login.path} replace/>} path="/"/>
         {

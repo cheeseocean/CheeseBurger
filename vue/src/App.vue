@@ -1,5 +1,5 @@
 <template>
-  <div class="main">
+  <div :class="['main', !HIDE_MENU_PATH_SET.has($route.path) ? 'pb-50' : '']">
     <router-view/>
     <van-tabbar v-if="!HIDE_MENU_PATH_SET.has($route.path)" route>
       <van-tabbar-item icon="home-o" :to="INDEX_PATH">首页</van-tabbar-item>
