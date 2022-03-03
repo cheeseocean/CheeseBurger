@@ -11,13 +11,13 @@ function CodeButton(props: Props) {
   const btnRef = useRef(null)
   const text = '发送验证码'
   const intervalTime = 60
-  let timer: NodeJS.Timer, time = useRef(0)
+  let timer: number, time = useRef(0)
   useEffect(() => {
     const clickTime = parseInt(localStorage.getItem('code') || '0', 36) || 0
     time.current = Math.floor((Date.now() - clickTime) / 1000)
     if (time.current <= intervalTime) {
       time.current = intervalTime - time.current
-      checkBtn(btnRef.current as any)
+      checkBtn(btnRef.current as unknown as HTMLElement)
     }
     // eslint-disable-next-line
   }, [])
@@ -28,7 +28,7 @@ function CodeButton(props: Props) {
     http(props.requestConfig).then(() => {
       time.current = intervalTime
       localStorage.setItem('code', Date.now().toString(36))
-      checkBtn(btnRef.current as any)
+      checkBtn(btnRef.current as unknown as HTMLElement)
     })
   }
 
@@ -36,7 +36,7 @@ function CodeButton(props: Props) {
     btn.innerText = text + '（' + time.current + '）'
     btn.setAttribute('disabled', '')
     btn.classList.add('adm-button-disabled')
-    timer = setInterval(() => {
+    timer = window.setInterval(() => {
       time.current--
       if (time.current !== 0) {
         btn.innerText = text + '（' + time.current + '）'

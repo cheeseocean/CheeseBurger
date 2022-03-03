@@ -42,11 +42,11 @@ const routes: Array<RouteRecordRaw> = [
     path: CREATION_PATH, // 创作中心
     name: 'Creation',
     component: () => import('@/views/creation/creation.vue')
-  },{
+  }, {
     path: VIDEOS_PATH, // 云视频
     name: 'Videos',
     component: () => import('@/views/videos/videos.vue')
-  },{
+  }, {
     path: PERSONAL_PATH, // 个人中心
     name: 'Personal',
     component: () => import('@/views/personal/personal.vue')

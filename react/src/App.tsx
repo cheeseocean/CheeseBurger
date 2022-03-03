@@ -27,13 +27,13 @@ function App() {
     },
     {
       key: creation.path,
-      title: '云创作',
+      title: '创作中心',
       icon: <MessageOutline/>,
       badge: ''
     },
     {
       key: personal.path,
-      title: '创作中心',
+      title: '个人中心',
       icon: <UserOutline/>,
       badge: ''
     },
@@ -56,7 +56,7 @@ function App() {
       </Routes>
       {
         HIDE_MENU_PATH_SET.has(location.pathname) ? null :
-          <TabBar onChange={tabChange} className='tab-bar'>
+          <TabBar onChange={tabChange} activeKey={location.pathname} className='tab-bar'>
             {tabs.map(item => (
               <TabBar.Item
                 key={item.key}

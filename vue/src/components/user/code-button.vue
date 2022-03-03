@@ -3,9 +3,9 @@
 </template>
 
 <script lang="ts" setup>
-import {defineProps, onMounted, ref, withDefaults} from "vue";
-import http from "@/http/http";
-import {HttpFetchConfig} from "js-http-fetch/types/types";
+import {defineProps, onMounted, ref, withDefaults} from 'vue'
+import http from '@/http/http'
+import {HttpFetchConfig} from 'js-http-fetch/types/types'
 
 const btnRef = ref()
 
@@ -41,7 +41,7 @@ function checkBtn(btn: HTMLElement) {
   btn.innerText = text + '（' + time + '）'
   btn.setAttribute('disabled', '')
   btn.classList.add('van-button--disabled')
-  timer = setInterval(() => {
+  timer = window.setInterval(() => {
     time--
     if (time !== 0) {
       btn.innerText = text + '（' + time + '）'

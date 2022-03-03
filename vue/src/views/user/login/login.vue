@@ -36,11 +36,11 @@
 </template>
 
 <script lang="ts" setup>
-import {ref} from "vue";
-import http from "@/http/http";
-import base64 from 'base-64';
-import {useRouter} from "vue-router";
-import {INDEX_PATH} from "@/router";
+import {ref} from 'vue'
+import http from '@/http/http'
+import base64 from 'base-64'
+import {useRouter} from 'vue-router'
+import {INDEX_PATH} from '@/router'
 
 const username = ref('')
 const password = ref('')
@@ -52,7 +52,7 @@ function login() {
   formData.append('username', username.value)
   formData.append('password', base64.encode(password.value))
   http.post('', formData,
-      {headers: {"Content-Type": 'multipart/form-data'}}).then(r => console.log(r))
+      {headers: {'Content-Type': 'multipart/form-data'}}).then(r => console.log(r))
   router.push(INDEX_PATH)
 }
 </script>

@@ -11,12 +11,13 @@
   </div>
 </template>
 <script lang="ts" setup>
-import {HIDE_MENU_PATH_SET, INDEX_PATH, COMMUNITY_PATH, CREATION_PATH, VIDEOS_PATH, PERSONAL_PATH} from "@/router";
+import {HIDE_MENU_PATH_SET, INDEX_PATH, COMMUNITY_PATH, CREATION_PATH, VIDEOS_PATH, PERSONAL_PATH} from '@/router'
 
 </script>
 <style lang="scss" scoped>
 .main {
   max-width: 540PX;
   width: 100%;
+  min-height: 100%;
 }
 </style>

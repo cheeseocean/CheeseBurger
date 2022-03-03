@@ -10,15 +10,15 @@
       </div>
       <div class="head-tab-box">
         <div class="tab">
-          <span class="co-black">199</span>
+          <span class="val">199</span>
           <span>动态</span>
         </div>
         <div class="tab">
-          <span class="co-black">9999</span>
+          <span class="val">9999</span>
           <span>粉丝</span>
         </div>
         <div class="tab">
-          <span class="co-black">1</span>
+          <span class="val">1</span>
           <span>关注</span>
         </div>
       </div>
@@ -37,7 +37,7 @@
           <van-icon name="flower-o"/>
           <span>近期睡眠报告</span>
         </div>
-        <span>查看详情></span>
+        <span>查看详情&gt;</span>
       </div>
       <div class="nav-box">
         <nav>
@@ -72,11 +72,11 @@
 </script>
 
 <style lang="scss" scoped>
-@import "~@/assets/css/public.scss";
 
 .personal-box {
   background: #f5f5f5;
   padding-bottom: 10px;
+  height: 100%;
 
   header {
     font-size: 14px;
@@ -104,15 +104,18 @@
     .tab {
       display: flex;
       flex: 1;
-      height: 40px;
       flex-direction: column;
       align-items: center;
-      justify-content: space-between;
       border-right: 1px solid #ccc;
 
       &:last-of-type {
         border-right: none;
       }
+    }
+
+    .val {
+      color: #000;
+      margin-bottom: 5px;
     }
   }
 
@@ -147,10 +150,10 @@
       display: flex;
       align-items: center;
       height: 80px;
-    }
 
-    .van-icon {
-      font-size: 24px;
+      .van-icon {
+        font-size: 24px;
+      }
     }
 
     .nav-box {
@@ -170,11 +173,11 @@
       flex-direction: column;
       align-items: center;
       justify-content: space-between;
-    }
 
-    .van-icon {
-      font-size: 30px;
-      margin-bottom: 5px;
+      .van-icon {
+        font-size: 30px;
+        margin-bottom: 5px;
+      }
     }
   }
 

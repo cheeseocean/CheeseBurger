@@ -23,8 +23,8 @@
 </template>
 
 <script lang="ts" setup>
-import {ref} from "vue";
-import CodeButton from "@/components/user/code-button.vue";
+import {ref} from 'vue'
+import CodeButton from '@/components/user/code-button.vue'
 
 const username = ref('')
 const email = ref('')
