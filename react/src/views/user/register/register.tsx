@@ -27,14 +27,14 @@ export default function Register() {
         <Form.Item name='username' label='用户名' rules={[{required: true, message: '请填写用户名'}]}>
           <Input placeholder='请输入用户名'/>
         </Form.Item>
-        <Form.Item name='email' label='邮箱' rules={[{required: true, message: '请填写邮箱'}]}>
-          <Input placeholder='请输入邮箱' onChange={setEmail} clearable type='password'/>
-        </Form.Item>
         <Form.Item name='password' label='密码' rules={[{required: true, message: '请填写密码'}]}>
           <Input placeholder='请输入密码' clearable type='password'/>
         </Form.Item>
         <Form.Item name='password2' label='确认密码' rules={[{required: true, message: '请再次填写密码'}]}>
           <Input placeholder='请再次输入密码' clearable type='password'/>
+        </Form.Item>
+        <Form.Item name='email' label='邮箱' rules={[{required: true, message: '请填写邮箱'}]}>
+          <Input placeholder='请输入邮箱' onChange={setEmail} clearable/>
         </Form.Item>
         <Form.Item
           name='code'

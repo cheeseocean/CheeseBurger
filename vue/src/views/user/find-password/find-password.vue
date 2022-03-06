@@ -2,9 +2,9 @@
   <h3 class="title">找回密码</h3>
   <van-form>
     <van-cell-group inset @submit="findPassword">
-      <van-field v-model="username" name="用户名" clearable label="用户名" placeholder="请输入用户名" :rules="[{ required: true, message: '请填写用户名' }]"/>
-      <van-field v-model="email" type="password" name="邮箱" clearable label="邮箱" placeholder="请输入邮箱" :rules="[{ required: true, message: '请填写邮箱' }]"/>
-      <van-field v-model="code" center clearable label="邮箱验证码" placeholder="请输入验证码" :rules="[{ required: true, message: '请填写邮箱验证码' }]">
+      <van-field required v-model="username" name="用户名" clearable label="用户名" placeholder="请输入用户名" :rules="[{ required: true, message: '请填写用户名' }]"/>
+      <van-field required v-model="email" type="password" name="邮箱" clearable label="邮箱" placeholder="请输入邮箱" :rules="[{ required: true, message: '请填写邮箱' }]"/>
+      <van-field required v-model="code" center clearable label="邮箱验证码" placeholder="请输入验证码" :rules="[{ required: true, message: '请填写邮箱验证码' }]">
         <template #button>
           <code-button :validator="() => !!email" :request-config="{url: ''}"/>
         </template>
